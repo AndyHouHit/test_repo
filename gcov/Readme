@@ -1,0 +1,38 @@
+# Requirement
+###gcc --version
+[tcn@localhost gcov]$ gcc --version
+gcc (GCC) 8.3.1 20191121 (Red Hat 8.3.1-5)
+
+###lcov version
+[tcn@localhost gcov]$ lcov -v
+lcov: LCOV version 1.14
+
+#build
+make gcov  #to build img & run, then get the html report by lcov
+
+#Results:, report generated in html directory
+├── html
+│   ├── amber.png
+│   ├── emerald.png
+│   ├── gcov
+│   │   ├── index.html
+│   │   ├── index-sort-f.html
+│   │   ├── index-sort-l.html
+│   │   ├── tmp.c.func.html
+│   │   ├── tmp.c.func-sort-c.html
+│   │   └── tmp.c.gcov.html
+│   ├── gcov.css
+│   ├── glass.png
+│   ├── index.html
+│   ├── index-sort-f.html
+│   ├── index-sort-l.html
+│   ├── ruby.png
+│   ├── snow.png
+│   └── updown.png
+├── main.info
+├── Makefile
+├── tmp
+├── tmp.c
+├── tmp.gcda
+└── tmp.gcno
+
