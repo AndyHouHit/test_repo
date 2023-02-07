@@ -35,3 +35,10 @@ make gcov  #to build img & run, then get the html report by lcov
 # /work/src/tmp/test_git/gcov/tmp.gcno:no functions found
 # /work/src/tmp/test_git/gcov/tmp.gcda:version 'B12*', prefer version 'A83*'
 # geninfo: WARNING: GCOV did not produce any data for /work/src/tmp/test_git/gcov/tmp.gcda
+#
+# 1. Using lcov --gcov-tool option to specific the cross-compile-gcov directory if you are
+# trying to covert the the counter files to a report info file
+# eg. lcov  -c -o main.info -d .  --gcov-tool /work/ToolChains/gcc-arm-8.3-2019.03-x86_64-aarch64-linux-gnu/bin/aarch64-linux-gnu-gcov
+#
+# 2. copy all *.gcda *.gcno files to the same directory, then using "lcov -d $dir" option to specific the input files
+
