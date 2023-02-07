@@ -1,12 +1,3 @@
-# Requirement
-###gcc --version
-[tcn@localhost gcov]$ gcc --version
-gcc (GCC) 8.3.1 20191121 (Red Hat 8.3.1-5)
-
-###lcov version
-[tcn@localhost gcov]$ lcov -v
-lcov: LCOV version 1.14
-
 #build
 make gcov  #to build img & run, then get the html report by lcov
 
@@ -36,3 +27,11 @@ make gcov  #to build img & run, then get the html report by lcov
 ├── tmp.gcda
 └── tmp.gcno
 
+#Note
+# If you found the following error when do lcov,
+# plz checking the gcov tools version is matched with your gcc version
+#
+# /work/src/tmp/test_git/gcov/tmp.gcno:version 'B12*', prefer 'A83*'
+# /work/src/tmp/test_git/gcov/tmp.gcno:no functions found
+# /work/src/tmp/test_git/gcov/tmp.gcda:version 'B12*', prefer version 'A83*'
+# geninfo: WARNING: GCOV did not produce any data for /work/src/tmp/test_git/gcov/tmp.gcda
