@@ -3,7 +3,7 @@ all: app gcov
 
 #build app with coverage flag, then generate *.gcno file
 app: 
-	gcc --coverage ./tmp.c -o tmp
+	gcc --coverage ./tmp.c ./lib.c -o tmp
 
 gcov: app
 	#run app, create the counter file *.gcda

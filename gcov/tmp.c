@@ -8,21 +8,7 @@
 ************************************************************************/
 
 #include<stdio.h>
-
-int x = 3;
-
-int a() {
-    switch (x) {
-    case 3:
-    case 4:
-        x++;
-    default:
-    return a() +1;
-
-    case 5: break;
-}
-    return x;
-}
+#include"lib.h"
 
 int main() {
 	int *b[10];
