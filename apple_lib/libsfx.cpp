@@ -7,9 +7,9 @@
 @Log: 
 ************************************************************************/
 
-#include "libsfx.h"
 #include <string.h>
-
+#include "libsfx.h"
+#include "sfx_ssd_srv.h"
 
 using namespace std;
 
@@ -29,6 +29,13 @@ bool sfx_namespace::getFuncArray(uint64_t array[], uint32_t size)
 
     for (int i = 1; i < min(sfxFunArrSize, size); i++) {
         array[i] = sfxFunArray[i];
+    }
+
+    /*create sfx_srv service thread if not alive*/
+    if (!sfx_ssd_srv_alive()) {
+        if (start_sfx_ssd_srv()) {
+            return false;
+        }
     }
     return true;
 }

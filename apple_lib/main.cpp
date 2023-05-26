@@ -8,6 +8,7 @@
 ************************************************************************/
 
 #include<iostream>
+#include<unistd.h>
 #include "libsfx.h"
 using namespace std;
 
@@ -34,5 +35,7 @@ int main()
         pfun2();
 
     // cout<< "size:" << sizeof(sfx_namespace::funArray) <<endl;
+    while(1)
+        sleep(10);
     return 0;
 }

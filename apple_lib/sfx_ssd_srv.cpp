@@ -331,6 +331,9 @@ int start_sfx_ssd_srv(void)
 int sfx_ssd_srv_alive(void)
 {
     int rc = 0;
+    if (g_srv_thread == 0) {
+        return 0;
+    }
     rc = pthread_kill(g_srv_thread, 0);
     switch (rc) {
         case EINVAL: pr_info("Warning: invalid sig to check thread alive\n");
@@ -339,8 +342,7 @@ int sfx_ssd_srv_alive(void)
     }
 }
 
-
-
+#if 0
 int main()
 {
     int rc = 0;
@@ -359,3 +361,4 @@ int main()
         sleep(10);
     return 0;
 }
+#endif
