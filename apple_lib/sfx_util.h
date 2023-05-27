@@ -9,7 +9,7 @@
 #ifndef __SFX_UTIL_H__
 #define __SFX_UTIL_H__
 
-// #define DEBUG_SRV
+#define DEBUG_SRV
 #define DEBUG
 
 #define pr_info printf
